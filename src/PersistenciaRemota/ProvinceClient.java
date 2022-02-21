@@ -12,7 +12,7 @@ public class ProvinceClient {
     public static void main(String[] args) {
         try {
 //Get reference to rmi registry server
-            Registry registry = LocateRegistry.getRegistry("127.0.0.1");
+            Registry registry = LocateRegistry.getRegistry("192.168.229.237");
 
 //Lookup server object
             IRemoteProvince rp = (IRemoteProvince) registry.lookup("province");
@@ -57,7 +57,8 @@ public class ProvinceClient {
 
 //Delete all provinces
             System.out.println("Delete all provinces");
-            rp.deleteAll();
+
+            //rp.deleteAll();
 
         } catch (Exception e) {
             System.out.println(e);
